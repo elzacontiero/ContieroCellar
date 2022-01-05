@@ -1,0 +1,58 @@
+package com.contiero.cellar.controller;
+
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.contiero.cellar.domain.Wine;
+import com.contiero.cellar.service.WineService;
+
+
+@RestController
+@RequestMapping("/wine")
+public class WineController {
+	private WineService service;
+	
+	private WineController(WineService service) {
+		this.service = service;
+	}
+	
+	@PostMapping("/create")
+	public ResponseEntity<Wine> createWine(@RequestBody Wine wine) {
+		return new ResponseEntity<Wine>(service.create(wine), HttpStatus.CREATED);
+	}
+	
+	@GetMapping("/readAll")
+	public ResponseEntity<List<Wine>> readAll() {
+		return new ResponseEntity<List<Wine>>(service.getAll(), HttpStatus.OK);
+	}
+	
+	@GetMapping("/readById/{id}")
+	public ResponseEntity<Wine> readById(@PathVariable long id) {
+		return new ResponseEntity<Wine>(this.service.getById(id), HttpStatus.OK);
+	}
+	
+	@PutMapping("/update/{id}")
+	public ResponseEntity<Wine> update(@PathVariable long id, @RequestBody Wine wine) { 
+		return new ResponseEntity<Wine>(service.update(id, wine), HttpStatus.ACCEPTED);
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public ResponseEntity<Boolean> delete(@PathVariable long id) {
+	
+		if (service.delete(id)) {
+			return new ResponseEntity<Boolean>(HttpStatus.NO_CONTENT);
+		} else {
+			return new ResponseEntity<Boolean>(HttpStatus.NOT_FOUND);
+		}			
+	}	
+}
