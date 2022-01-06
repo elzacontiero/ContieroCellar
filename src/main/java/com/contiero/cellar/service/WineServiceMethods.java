@@ -13,6 +13,9 @@ public interface WineServiceMethods<T> {
 	//Read By Id
 	T getById(long id);
 	
+	// 
+	List<T> getByProducer(String producer);
+	
 	//Update
 	T update(long id, T t);
 	

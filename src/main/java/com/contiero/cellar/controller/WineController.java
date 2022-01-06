@@ -33,13 +33,22 @@ public class WineController {
 	
 	@GetMapping("/readAll")
 	public ResponseEntity<List<Wine>> readAll() {
-		return new ResponseEntity<List<Wine>>(service.getAll(), HttpStatus.OK);
+		List<Wine> listOfWine = service.getAll();
+		return new ResponseEntity<List<Wine>>(listOfWine, HttpStatus.OK);
 	}
 	
 	@GetMapping("/readById/{id}")
 	public ResponseEntity<Wine> readById(@PathVariable long id) {
-		return new ResponseEntity<Wine>(this.service.getById(id), HttpStatus.OK);
+		Wine wine = service.getById(id);
+		return new ResponseEntity<Wine>(wine, HttpStatus.OK);
 	}
+	
+	@GetMapping("/readByProducer/{producer}")
+	public ResponseEntity<List<Wine>> readByProducer(@PathVariable String producer){
+		List<Wine> listOfWine = service.getByProducer(producer);
+		return new ResponseEntity<List<Wine>>(listOfWine, HttpStatus.OK);
+	}
+	
 	
 	@PutMapping("/update/{id}")
 	public ResponseEntity<Wine> update(@PathVariable long id, @RequestBody Wine wine) { 
@@ -53,6 +62,6 @@ public class WineController {
 			return new ResponseEntity<Boolean>(HttpStatus.NO_CONTENT);
 		} else {
 			return new ResponseEntity<Boolean>(HttpStatus.NOT_FOUND);
-		}			
-	}	
+		}
+	}
 }

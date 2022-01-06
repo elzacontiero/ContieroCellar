@@ -33,6 +33,8 @@ public class WineService implements WineServiceMethods<Wine> {
 		}
 		return null;
 	}
+	
+	
 
 	@Override
 	public Wine update(long id, Wine wine) {
@@ -55,6 +57,11 @@ public class WineService implements WineServiceMethods<Wine> {
 	public boolean delete(long id) {
 		repo.deleteById(id);
 		return !repo.existsById(id);
+	}
+
+	@Override
+	public List<Wine> getByProducer(String producer) {
+		return repo.findWineByProducer(producer);
 	}
 
 	
