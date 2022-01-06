@@ -10,4 +10,5 @@ public interface WineRepo extends JpaRepository<Wine, Long> {
 
 	List<Wine> findWineByType(String type);
 
+	List<Wine> findWineByPriceLessThan(double price);
 }

@@ -69,6 +69,11 @@ public class WineService implements WineServiceMethods<Wine> {
 		return repo.findWineByType(type);
 	}
 
+	@Override
+	public List<Wine> getCheaperThan(double price) {
+		return repo.findWineByPriceLessThan(price);
+	}
+
 	
 }
 

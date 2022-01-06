@@ -54,7 +54,13 @@ public class WineController {
 		List<Wine> wines = service.getByType(type);
 		return new ResponseEntity<List<Wine>>(wines, HttpStatus.OK);
 	}
-	
+
+	@GetMapping("/readCheaperThan/{price}")
+	public ResponseEntity<List<Wine>> readCheaperThan(@PathVariable double price) {
+		List<Wine> wines = service.getCheaperThan(price);
+		return new ResponseEntity<List<Wine>>(wines, HttpStatus.OK);
+	}
+
 	
 	@PutMapping("/update/{id}")
 	public ResponseEntity<Wine> update(@PathVariable long id, @RequestBody Wine wine) { 

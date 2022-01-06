@@ -17,6 +17,8 @@ public interface WineServiceMethods<T> {
 	List<T> getByProducer(String producer);
 	
 	List<T> getByType(String type);
+
+	List<T> getCheaperThan(double price);
 	
 	//Update
 	T update(long id, T t);
