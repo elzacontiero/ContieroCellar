@@ -20,6 +20,8 @@ public interface WineServiceMethods<T> {
 
 	List<T> getCheaperThan(double price);
 	
+	List<T> getByRegion(String region);
+	
 	//Update
 	T update(long id, T t);
 	
