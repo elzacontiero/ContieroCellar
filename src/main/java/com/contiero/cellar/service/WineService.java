@@ -64,6 +64,11 @@ public class WineService implements WineServiceMethods<Wine> {
 		return repo.findWineByProducer(producer);
 	}
 
+	@Override
+	public List<Wine> getByType(String type) {
+		return repo.findWineByType(type);
+	}
+
 	
 }
 

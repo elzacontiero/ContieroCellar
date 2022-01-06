@@ -49,6 +49,12 @@ public class WineController {
 		return new ResponseEntity<List<Wine>>(listOfWine, HttpStatus.OK);
 	}
 	
+	@GetMapping("/readByType/{type}")
+	public ResponseEntity<List<Wine>> readByType(@PathVariable String type) {
+		List<Wine> wines = service.getByType(type);
+		return new ResponseEntity<List<Wine>>(wines, HttpStatus.OK);
+	}
+	
 	
 	@PutMapping("/update/{id}")
 	public ResponseEntity<Wine> update(@PathVariable long id, @RequestBody Wine wine) { 

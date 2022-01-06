@@ -8,4 +8,6 @@ public interface WineRepo extends JpaRepository<Wine, Long> {
 	
 	List<Wine> findWineByProducer(String producer);
 
+	List<Wine> findWineByType(String type);
+
 }
