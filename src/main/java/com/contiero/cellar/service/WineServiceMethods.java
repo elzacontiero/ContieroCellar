@@ -22,6 +22,8 @@ public interface WineServiceMethods<T> {
 	
 	List<T> getByRegion(String region);
 	
+	List<T> getByTypeAndPrice(String type, double price);
+	
 	//Update
 	T update(long id, T t);
 	
