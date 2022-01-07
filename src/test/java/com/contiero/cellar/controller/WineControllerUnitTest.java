@@ -33,8 +33,8 @@ public class WineControllerUnitTest {
     private WineService service;
 
     @Test
-    public void testCreate() throws Exception {
-		Wine wine = new Wine("Barolo", "red", "Masi", 65.01, 1985, "Italy", 12);
+    public void createTest() throws Exception {
+        Wine wine = new Wine("Barolo", "red", "Masi", 65.01, 1985, "Italy", 12);
         String json = mapper.writeValueAsString(wine);
 
         Mockito.when(service.create(wine)).thenReturn(wine);
