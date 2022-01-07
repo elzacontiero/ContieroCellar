@@ -42,6 +42,20 @@ public class WineTest {
 		assertEquals(1985 , wine.getYear());
 	}
 
+	@Test
+	public void withIdConstructorValuesOk() {
+		Wine wine = new Wine(123, "Barolo", "red", "Masi", 65.01, 1985, "Italy", 12);
+		
+		// Checks values are correct
+		assertEquals("Barolo", wine.getName());
+		assertEquals(12, wine.getNumberOfBottles());
+		assertEquals(65.01 , wine.getPrice());
+		assertEquals("Masi" , wine.getProducer());
+		assertEquals("Italy" , wine.getRegion());
+		assertEquals("red" , wine.getType());
+		assertEquals(1985 , wine.getYear());
+	}
+
 	@Test 
 	public void settersTest() {
 		Wine wine = new Wine();
