@@ -41,5 +41,36 @@ public class WineTest {
 		assertEquals("red" , wine.getType());
 		assertEquals(1985 , wine.getYear());
 	}
+
+	@Test 
+	public void settersTest() {
+		Wine wine = new Wine();
+
+		wine.setName("Barolo");
+		wine.setNumberOfBottles(12);
+		wine.setPrice(65.01);
+		wine.setProducer("Masi");
+		wine.setRegion("Italy");
+		wine.setType("red");
+		wine.setYear(1985);
+
+		// Checks not null
+		assertNotNull(wine.getName());
+		assertNotNull(wine.getNumberOfBottles());
+		assertNotNull(wine.getPrice());
+		assertNotNull(wine.getProducer());
+		assertNotNull(wine.getRegion());
+		assertNotNull(wine.getType());
+		assertNotNull(wine.getYear());
+
+		// Checks values are correct
+		assertEquals("Barolo", wine.getName());
+		assertEquals(12, wine.getNumberOfBottles());
+		assertEquals(65.01 , wine.getPrice());
+		assertEquals("Masi" , wine.getProducer());
+		assertEquals("Italy" , wine.getRegion());
+		assertEquals("red" , wine.getType());
+		assertEquals(1985 , wine.getYear());
+	}
 	
  }
