@@ -107,4 +107,15 @@ public class WineServiceUnitTest {
         Mockito.verify(repo, Mockito.times(1)).findWineByRegion(region);
     }
 
+    @Test 
+    public void retrieveByTypeAndPriceLessThanTest() {
+        final double price = 100.00;
+        List<Wine> out = buildListOfWines();
+        Mockito.when(repo.findWineByTypeAndPriceLessThan("red", price)).thenReturn(out);
+
+        List<Wine> got = service.getByTypeAndPrice("red", price);
+        assertEquals(out, got);
+        Mockito.verify(repo, Mockito.times(1)).findWineByTypeAndPriceLessThan("red", price);
+    }
+
 }
