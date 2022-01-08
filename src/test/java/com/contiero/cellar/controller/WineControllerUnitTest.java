@@ -5,6 +5,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -61,5 +62,22 @@ public class WineControllerUnitTest {
             .andExpect(status().isOk())
             .andExpect(content().json(json));
         ;
+    }
+
+    @Test
+    public void retrieveListOfWinesFromProducerTest() throws Exception {
+        final String producer = "Masi";
+        Wine in1 = new Wine(1L, "Barolo",   "red", producer, 65.01, 1985, "Italy", 12);
+        Wine in2 = new Wine(2L, "Amarone",  "red", producer, 65.02, 2007, "Italy", 12);
+        Wine in3 = new Wine(3L, "Barbaresco", "red", "Fontanafredda", 65.03, 2000, "Italy", 12);
+
+        List<Wine> winesFromProducer = List.of(in1, in2);
+        String json = mapper.writeValueAsString(winesFromProducer);
+        
+        Mockito.when(service.getByProducer(producer)).thenReturn(winesFromProducer);
+
+        mvc.perform(get("/wine/readByProducer/" + producer))
+            .andExpect(status().isOk())
+            .andExpect(content().json(json));
     }
 }
