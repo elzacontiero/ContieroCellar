@@ -24,6 +24,15 @@ public class WineServiceUnitTest {
     @MockBean
     private WineRepo repo;
 
+    List<Wine> buildListOfWines() 
+    {
+        String producer = "Masi";
+        Wine in1 = new Wine(1L, "Barolo",   "red", producer, 65.01, 1985, "Italy", 12);
+        Wine in2 = new Wine(2L, "Amarone",  "red", producer, 65.02, 2007, "Italy", 12);
+        
+        return List.of(in1, in2);
+    }
+
     @Test
     public void createTest() {
         Wine in = new Wine("Barolo", "red", "Masi", 65.01, 1985, "Italy", 12);
@@ -56,10 +65,7 @@ public class WineServiceUnitTest {
     @Test
     public void retrieveListOfWinesFromProducerTest() {
         String producer = "Masi";
-        Wine in1 = new Wine(1L, "Barolo",   "red", producer, 65.01, 1985, "Italy", 12);
-        Wine in2 = new Wine(2L, "Amarone",  "red", producer, 65.02, 2007, "Italy", 12);
-        
-        List<Wine> out = List.of(in1, in2);
+        List<Wine> out = buildListOfWines();
         Mockito.when(repo.findWineByProducer(producer)).thenReturn(out);
 
         List<Wine> got = service.getByProducer(producer);
@@ -67,4 +73,15 @@ public class WineServiceUnitTest {
         Mockito.verify(repo, Mockito.times(1)).findWineByProducer(producer);
     }
 
+
+    @Test
+    public void retrieveListOfWinesByTypeTest() {
+        final String type = "red";
+        List<Wine> out = buildListOfWines();
+        Mockito.when(repo.findWineByType(type)).thenReturn(out);
+
+        List<Wine> got = service.getByType(type);
+        assertEquals(out, got);
+        Mockito.verify(repo, Mockito.times(1)).findWineByType(type);
+    }
 }
