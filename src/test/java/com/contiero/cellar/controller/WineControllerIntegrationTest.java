@@ -5,6 +5,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -56,4 +57,17 @@ public class WineControllerIntegrationTest {
             .andExpect(content().json(json));
     }
 
+    @Test
+    public void retrieveByProducerTest() throws Exception {
+        Wine w1 = new Wine(2, "Barolo",  "red", "Masi", 65.02, 2007, "Italy", 12);
+        Wine w2 = new Wine(3, "Amarone", "red", "Masi", 65.03, 2003, "Italy", 12);
+    
+        List<Wine> wines = List.of(w1, w2);
+        
+        String json = mapper.writeValueAsString(wines);
+
+        mvc.perform(get("/wine/readByProducer/Masi"))
+            .andExpect(status().isOk())
+            .andExpect(content().json(json));
+    }
 }
