@@ -34,7 +34,7 @@ public class WineControllerIntegrationTest {
     @Test
     public void createTest() throws Exception {
         Wine entry = new Wine("Barolo", "red", "Masi", 65.01, 1985, "Italy", 12);
-        Wine result = new Wine(3L, "Barolo", "red", "Masi", 65.01, 1985, "Italy", 12);
+        Wine result = new Wine(8L, "Barolo", "red", "Masi", 65.01, 1985, "Italy", 12);
 
         String entryJson = mapper.writeValueAsString(entry);
         String resultJson = mapper.writeValueAsString(result);
@@ -74,11 +74,13 @@ public class WineControllerIntegrationTest {
     @Test 
     public void retrieveByTypeTest() throws Exception {
         final String type = "red";
-        Wine in1 = new Wine(2L, "Barolo",     type, "Masi",          65.02, 2007, "Italy", 12);
-        Wine in2 = new Wine(3L, "Amarone",    type, "Masi",          65.03, 2003, "Italy", 12);
-        Wine in3 = new Wine(4L, "Barbaresco", type, "Fontanafredda", 65.04, 2004, "Italy", 12);
-
-        List<Wine> wines = List.of(in1,in2, in3);
+        List<Wine> wines = List.of(
+            new Wine(2, "Barolo",             "red",       "Masi",                65.02,  2007, "Italy",  12),
+            new Wine(3, "Amarone",            "red",       "Masi",                65.03,  2003, "Italy",  12),
+            new Wine(4, "Barbaresco",         "red",       "Fontanafredda",       65.04,  2004, "Italy",  12),
+            new Wine(6, "Bordeaux Superieur", "red",       "Belgrave",            78.00,  2001, "France", 12),
+            new Wine(7, "Saint-Emilion",      "red",       "ChateauChevalBlanc",  136.00, 1991, "France", 12)        
+        );
         String json = mapper.writeValueAsString(wines);
         mvc.perform(get("/wine/readByType/" + type))
             .andExpect(status().isOk())
@@ -96,5 +98,6 @@ public class WineControllerIntegrationTest {
             .andExpect(status().isOk())
             .andExpect(content().json(json));
     }
+
 
 }
