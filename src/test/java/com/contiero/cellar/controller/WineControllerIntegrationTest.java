@@ -1,6 +1,7 @@
 package com.contiero.cellar.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -43,4 +44,16 @@ public class WineControllerIntegrationTest {
             .andExpect(status().isCreated())
             .andExpect(content().json(resultJson));
     }
+
+    @Test
+    public void retrieveByIDTest() throws Exception {
+        // See wine-data.sql for this entry
+        Wine entry = new Wine(2L, "Barolo", "red", "Masi", 65.02, 2007, "Italy", 12);
+        String json = mapper.writeValueAsString(entry);
+
+        mvc.perform(get("/wine/readById/2"))
+            .andExpect(status().isOk())
+            .andExpect(content().json(json));
+    }
+
 }
