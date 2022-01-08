@@ -99,5 +99,18 @@ public class WineControllerIntegrationTest {
             .andExpect(content().json(json));
     }
 
+    @Test 
+    public void retrieveByRegionTest() throws Exception {
+        final String region = "France";
+        List<Wine> wines = List.of(
+            new Wine(6, "Bordeaux Superieur", "red",       "Belgrave",            78.00,  2001, "France", 12),
+            new Wine(7, "Saint-Emilion",      "red",       "ChateauChevalBlanc",  136.00, 1991, "France", 12)
+        );
+        
+        String json = mapper.writeValueAsString(wines);
+        mvc.perform(get("/wine/readByRegion/" + region))
+            .andExpect(status().isOk())
+            .andExpect(content().json(json));
+    }
 
 }
