@@ -70,4 +70,18 @@ public class WineControllerIntegrationTest {
             .andExpect(status().isOk())
             .andExpect(content().json(json));
     }
+
+    @Test 
+    public void retrieveByTypeTest() throws Exception {
+        final String type = "red";
+        Wine in1 = new Wine(2L, "Barolo",     type, "Masi",          65.02, 2007, "Italy", 12);
+        Wine in2 = new Wine(3L, "Amarone",    type, "Masi",          65.03, 2003, "Italy", 12);
+        Wine in3 = new Wine(4L, "Barbaresco", type, "Fontanafredda", 65.04, 2004, "Italy", 12);
+
+        List<Wine> wines = List.of(in1,in2, in3);
+        String json = mapper.writeValueAsString(wines);
+        mvc.perform(get("/wine/readByType/" + type))
+            .andExpect(status().isOk())
+            .andExpect(content().json(json));
+    }
 }
