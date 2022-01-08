@@ -84,4 +84,17 @@ public class WineControllerIntegrationTest {
             .andExpect(status().isOk())
             .andExpect(content().json(json));
     }
+
+    @Test 
+    public void retrieveListOfWinesUnderPriceTest() throws Exception {
+        final double price = 65.03;
+        Wine in1 = new Wine(5L, "Asti Amabile", "sparkling", "Fontanafredda", 12.00, 2021, "Italy", 12);
+        Wine in2 = new Wine(2L, "Barolo",  "red", "Masi", 65.02, 2007, "Italy", 12);
+        List<Wine> wines = List.of(in1,in2);
+        String json = mapper.writeValueAsString(wines);
+        mvc.perform(get("/wine/readCheaperThan/" + price))
+            .andExpect(status().isOk())
+            .andExpect(content().json(json));
+    }
+
 }
