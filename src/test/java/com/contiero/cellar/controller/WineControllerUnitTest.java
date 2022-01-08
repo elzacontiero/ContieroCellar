@@ -73,10 +73,23 @@ public class WineControllerUnitTest {
 
         List<Wine> winesFromProducer = List.of(in1, in2);
         String json = mapper.writeValueAsString(winesFromProducer);
-        
+
         Mockito.when(service.getByProducer(producer)).thenReturn(winesFromProducer);
 
         mvc.perform(get("/wine/readByProducer/" + producer))
+            .andExpect(status().isOk())
+            .andExpect(content().json(json));
+    }
+
+    @Test 
+    public void retrieveListOfWinesByTypeTest() throws Exception {
+        final String type = "red";
+        Wine in1 = new Wine(1L, "Barolo", type, "Masi", 65.01, 1985, "Italy", 12);
+        Wine in2 = new Wine(2L, "Amarone",type, "Masi", 65.02, 2007, "Italy", 12);
+        List<Wine> wines = List.of(in1,in2);
+        String json = mapper.writeValueAsString(wines);
+        Mockito.when(service.getByType(type)).thenReturn(wines);
+        mvc.perform(get("/wine/readByType/" + type))
             .andExpect(status().isOk())
             .andExpect(content().json(json));
     }
