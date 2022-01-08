@@ -121,4 +121,19 @@ public class WineControllerUnitTest {
             .andExpect(content().json(json));
     }
 
+    @Test 
+    public void retrieveByTypeAndPriceLessThanTest() throws Exception {
+        final double price = 100.00;
+        List<Wine> wines = List.of(
+            new Wine(2, "Barolo",             "red", "Masi",          65.02, 2007, "Italy", 12),
+            new Wine(3, "Amarone",            "red", "Masi",          65.03, 2003, "Italy", 12),
+            new Wine(4, "Barbaresco",         "red", "Fontanafredda", 65.04, 2004, "Italy", 12),
+            new Wine(6, "Bordeaux Superieur", "red", "Belgrave",      78.00, 2001, "France", 12)
+        );
+        String json = mapper.writeValueAsString(wines);
+        Mockito.when(service.getByTypeAndPrice("red", price)).thenReturn(wines);
+        mvc.perform(get("/wine/readByTypeAndPriceLessThan/red/" + price))
+            .andExpect(status().isOk())
+            .andExpect(content().json(json));
+    }
 }
