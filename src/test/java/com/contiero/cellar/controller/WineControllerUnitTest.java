@@ -53,7 +53,6 @@ public class WineControllerUnitTest {
         Wine wine = new Wine(1, "Barolo", "red", "Masi", 65.01, 1985, "Italy", 12);
         String json = mapper.writeValueAsString(wine);
 
-        Mockito.when(service.create(wine)).thenReturn(wine);
         Mockito.when(service.getById(1)).thenReturn(wine);
 
         mvc.perform(get("/wine/readById/1")
