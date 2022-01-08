@@ -108,4 +108,17 @@ public class WineControllerUnitTest {
             .andExpect(content().json(json));
     }
 
+    @Test 
+    public void retrieveListOfWinesByRegionTest() throws Exception {
+        final String region = "Italy";
+        Wine in1 = new Wine(1L, "Barolo", "red", "Masi", 65.01, 1985, region, 12);
+        Wine in2 = new Wine(2L, "Amarone","red", "Masi", 65.02, 2007, region, 12);
+        List<Wine> wines = List.of(in1,in2);
+        String json = mapper.writeValueAsString(wines);
+        Mockito.when(service.getByRegion(region)).thenReturn(wines);
+        mvc.perform(get("/wine/readByRegion/" + region))
+            .andExpect(status().isOk())
+            .andExpect(content().json(json));
+    }
+
 }
