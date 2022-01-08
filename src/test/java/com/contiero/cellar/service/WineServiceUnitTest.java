@@ -95,4 +95,16 @@ public class WineServiceUnitTest {
         assertEquals(out, got);
         Mockito.verify(repo, Mockito.times(1)).findWineByPriceLessThan(price);
     }
+
+    @Test
+    public void retrieveListOfWinesByRegionTest() {
+        final String region = "Italy";
+        List<Wine> out = buildListOfWines();
+        Mockito.when(repo.findWineByRegion(region)).thenReturn(out);
+
+        List<Wine> got = service.getByRegion(region);
+        assertEquals(out, got);
+        Mockito.verify(repo, Mockito.times(1)).findWineByRegion(region);
+    }
+
 }
