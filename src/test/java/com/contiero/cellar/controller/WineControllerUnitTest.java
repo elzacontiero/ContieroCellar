@@ -1,6 +1,7 @@
 package com.contiero.cellar.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -45,5 +46,21 @@ public class WineControllerUnitTest {
             .andExpect(status().isCreated())
             .andExpect(content().json(json))
             ;
+    }
+
+    @Test 
+    public void retrieveByIDTest() throws Exception {
+        Wine wine = new Wine(1, "Barolo", "red", "Masi", 65.01, 1985, "Italy", 12);
+        String json = mapper.writeValueAsString(wine);
+
+        Mockito.when(service.create(wine)).thenReturn(wine);
+        Mockito.when(service.getById(1)).thenReturn(wine);
+
+        mvc.perform(get("/wine/readById/1")
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(json))
+            .andExpect(status().isOk())
+            .andExpect(content().json(json));
+        ;
     }
 }
