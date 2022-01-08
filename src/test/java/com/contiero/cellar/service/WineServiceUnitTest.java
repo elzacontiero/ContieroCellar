@@ -2,7 +2,11 @@ package com.contiero.cellar.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Optional;
+
+import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,9 +50,21 @@ public class WineServiceUnitTest {
         
         got = service.getById(out.getId());
         assertEquals(in, got);
-        Mockito.verify(repo, Mockito.times(1)).findById(out.getId());
-        
+        Mockito.verify(repo, Mockito.times(1)).findById(out.getId());        
     }
 
+    @Test
+    public void retrieveListOfWinesFromProducerTest() {
+        String producer = "Masi";
+        Wine in1 = new Wine(1L, "Barolo",   "red", producer, 65.01, 1985, "Italy", 12);
+        Wine in2 = new Wine(2L, "Amarone",  "red", producer, 65.02, 2007, "Italy", 12);
+        Wine in3 = new Wine(3L, "Barbaresco", "red", "Fontanafredda", 65.03, 2000, "Italy", 12);
+        List<Wine> out = List.of(in1, in2);
+        Mockito.when(repo.findWineByProducer(producer)).thenReturn(out);
+
+        List<Wine> got = service.getByProducer(producer);
+        assertEquals(out, got);
+        Mockito.verify(repo, Mockito.times(1)).findWineByProducer(producer);
+    }
 
 }
