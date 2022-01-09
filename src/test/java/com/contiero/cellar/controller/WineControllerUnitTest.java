@@ -156,8 +156,8 @@ public class WineControllerUnitTest {
     }
 
     @Test
-    public void updateProducertest() throws Exception {
-        Wine wine = new Wine(6, "Bordeaux Superieur", "red", "Belgraviii", 78.00,  2001, "France", 24);
+    public void updateAll() throws Exception {
+        Wine wine = new Wine(6, "Bordeaux", "red", "Bertinerie", 12.00,  2002, "France", 24);
         checkUpdate(wine);
     }
 }

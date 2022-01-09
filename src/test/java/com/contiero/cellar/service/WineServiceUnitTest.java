@@ -142,4 +142,12 @@ public class WineServiceUnitTest {
         checkUpdate(in, out);        
     }
 
+    @Test 
+    public void updateAll() throws Exception {
+        // as we can see above, updates are similar. So here we update all fields at once.
+        Wine in = new Wine(6, "Bordeaux Superieur", "rose", "Belgrave", 78.00,  2001, "Franci", 12);
+        Wine out = new Wine(6, "Bordeaux", "red", "Bertinerie", 12.00,  2002, "France", 24);
+        checkUpdate(in, out);        
+    }
+
 }

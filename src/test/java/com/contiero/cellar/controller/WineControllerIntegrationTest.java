@@ -130,7 +130,7 @@ public class WineControllerIntegrationTest {
 
     private void checkUpdate(Wine wine) throws Exception {
         String json = mapper.writeValueAsString(wine);
-        mvc.perform(put("/wine/update/6")
+        mvc.perform(put("/wine/update/" + wine.getId())
             .contentType(MediaType.APPLICATION_JSON)
             .content(json))
             .andExpect(status().isAccepted())
@@ -147,6 +147,12 @@ public class WineControllerIntegrationTest {
     @Test
     public void updateProducerTest() throws Exception {
         Wine out = new Wine(6, "Bordeaux Superieur", "red", "Belgravii", 78.00,  2001, "France", 12);
+        checkUpdate(out);
+    }
+
+    @Test
+    public void updateAll() throws Exception {
+        Wine out = new Wine(6, "Bordeaux", "rose", "Belgrave", 78.00,  2001, "France", 12);
         checkUpdate(out);
     }
 
