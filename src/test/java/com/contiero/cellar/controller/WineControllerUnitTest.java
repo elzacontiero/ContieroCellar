@@ -138,16 +138,26 @@ public class WineControllerUnitTest {
             .andExpect(content().json(json));
     }
 
-    @Test
-    public void updateNumberOfBottlesTest() throws Exception {
-        Wine out = new Wine(6, "Bordeaux Superieur", "red", "Belgrave", 78.00,  2001, "France", 24);
-        Mockito.when(service.update(6, out)).thenReturn(out);
-        String json = mapper.writeValueAsString(out);
+    private void checkUpdate(Wine wine) throws Exception {
+        Mockito.when(service.update(6, wine)).thenReturn(wine);
+        String json = mapper.writeValueAsString(wine);
         mvc.perform(put("/wine/update/6")
             .contentType(MediaType.APPLICATION_JSON)
             .content(json))
             .andExpect(status().isAccepted())
             .andExpect(content().json(json))
-            ;
+            ;        
+    }
+
+    @Test
+    public void updateNumberOfBottlesTest() throws Exception {
+        Wine wine = new Wine(6, "Bordeaux Superieur", "red", "Belgrave", 78.00,  2001, "France", 24);
+        checkUpdate(wine);
+    }
+
+    @Test
+    public void updateProducertest() throws Exception {
+        Wine wine = new Wine(6, "Bordeaux Superieur", "red", "Belgraviii", 78.00,  2001, "France", 24);
+        checkUpdate(wine);
     }
 }
