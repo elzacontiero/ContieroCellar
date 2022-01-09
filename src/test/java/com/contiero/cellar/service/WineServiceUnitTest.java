@@ -118,4 +118,17 @@ public class WineServiceUnitTest {
         Mockito.verify(repo, Mockito.times(1)).findWineByTypeAndPriceLessThan("red", price);
     }
 
+    @Test
+    public void updateNumberOfBottlesTest() throws Exception {
+        Wine in = new Wine(6, "Bordeaux Superieur", "red", "Belgrave", 78.00,  2001, "France", 12);
+        Wine out = new Wine(6, "Bordeaux Superieur", "red", "Belgrave", 78.00,  2001, "France", 24);
+        
+        Mockito.when(repo.saveAndFlush(in)).thenReturn(out);
+        Mockito.when(repo.findById(6)).thenReturn(Optional.of(in));
+        
+        service.update(6, out);
+        
+        Mockito.verify(repo, Mockito.times(1)).findById(6);
+        Mockito.verify(repo, Mockito.times(1)).saveAndFlush(out);
+    }
 }
