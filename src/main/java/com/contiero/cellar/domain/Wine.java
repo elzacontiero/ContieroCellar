@@ -42,7 +42,18 @@ public class Wine {
 	public Wine() {
 	}
 
-
+	public Wine(String name, String type, String producer, double price, int year, 
+			String region, int numberOfBottles) {
+		super();
+		this.name = name;
+		this.type = type;
+		this.producer = producer;
+		this.price = price;
+		this.year = year;
+		this.region = region;
+		this.numberOfBottles = numberOfBottles;
+	}
+	
 	public Wine(long id, String name, String type, String producer, double price, int year, 
 			String region, int numberOfBottles) {
 		super();
