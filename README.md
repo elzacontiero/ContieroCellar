@@ -20,11 +20,57 @@ The objective is to create a Spring Boot REST API, with utilisation of supportin
 
 ## Screenshots of postman requests with the output from the API.
 
+### Test 1 - Create Wine entity
+
+![Test 1 - Create Entity](doc/postman/Test1_create.PNG)
+
+
+### Test 2 - Read all wine entries
+
+![Test 2 - Read all wine entries](doc/postman/Test2_readAll.PNG)
+
+
+### Test 3 - Edit entry
+
+![Test 3 - Edit entry](doc/postman/Test3_edit.PNG)
+
+
+### Test 4 - Delete entry
+
+![Test 4 - Delete entry](doc/postman/Test4_delete.PNG)
+
+
+### Test 5 - Get wine entry by type
+
+![Test 5 - Get wine entry by type](doc/postman/Test5_getByType.PNG)
+
+
+### Test 6 - Get entries cheaper than amount
+
+![Test 6 - Get entries cheaper than amount](doc/postman/Test6_getCheaperThan.PNG)
+
+
+### Test 7 - Get entries by region
+
+![Test 7 - Get entries by region](doc/postman/Test7_getByRegion.PNG)
+
+
+### Test 8 - Get entries by type and under price
+
+![Test 8 - Get entries by type and under price](doc/postman/Test8_getByTypeAndPrice.PNG)
+
+
+### Test 9 - Get entries by producer
+
+![Test 9 - Get entries by producer](doc/postman/Test9_getByProducer.PNG)
+
 
 ## Screenshots of database.
 
+![Database](doc/MySQL.PNG)
 
-## Screenshot of test result.
+## Screenshot of test results.
+
 
 
 ## Link to Jira Board. 
