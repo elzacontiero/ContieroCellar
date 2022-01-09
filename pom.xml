@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.contiero</groupId>
 	<artifactId>ContieroCellarSpring</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1-RC1</version>
 	<name>ContieroCellarSpring</name>
 	<description>A REST service in Spring that controls CRUD operations on MySQL table</description>
 	<properties>
@@ -57,6 +57,11 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+    	</dependency>
 	</dependencies>
 
 	<build>
