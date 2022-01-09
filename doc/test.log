@@ -1,0 +1,197 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.contiero:ContieroCellarSpring >------------------
+[INFO] Building ContieroCellarSpring 0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ ContieroCellarSpring ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ ContieroCellarSpring ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ ContieroCellarSpring ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/elza/dev/ContieroCellar/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ ContieroCellarSpring ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ ContieroCellarSpring ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.contiero.cellar.ContieroCellarSpringApplicationTests
+20:37:16.719 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+20:37:16.725 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+20:37:16.745 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.contiero.cellar.ContieroCellarSpringApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+20:37:16.751 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.contiero.cellar.ContieroCellarSpringApplicationTests], using SpringBootContextLoader
+20:37:16.753 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.contiero.cellar.ContieroCellarSpringApplicationTests]: class path resource [com/contiero/cellar/ContieroCellarSpringApplicationTests-context.xml] does not exist
+20:37:16.754 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.contiero.cellar.ContieroCellarSpringApplicationTests]: class path resource [com/contiero/cellar/ContieroCellarSpringApplicationTestsContext.groovy] does not exist
+20:37:16.754 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.contiero.cellar.ContieroCellarSpringApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+20:37:16.754 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.contiero.cellar.ContieroCellarSpringApplicationTests]: ContieroCellarSpringApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:37:16.780 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.contiero.cellar.ContieroCellarSpringApplicationTests]
+20:37:16.807 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/elza/dev/ContieroCellar/target/classes/com/contiero/cellar/ContieroCellarSpringApplication.class]
+20:37:16.807 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.contiero.cellar.ContieroCellarSpringApplication for test class com.contiero.cellar.ContieroCellarSpringApplicationTests
+20:37:16.857 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.contiero.cellar.ContieroCellarSpringApplicationTests]: using defaults.
+20:37:16.857 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+20:37:16.867 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2f67b837, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1869fbd2, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6af9fcb2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6cce16f4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7efaad5a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@291a7e3c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@ca30bc1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1046d517, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b7d3a38, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@416c58f5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5505ae1a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@73cd37c0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@21337f7b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2bb3058, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7a362b6b]
+20:37:16.869 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@35432107 testClass = ContieroCellarSpringApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@7b420819 testClass = ContieroCellarSpringApplicationTests, locations = '{}', classes = '{class com.contiero.cellar.ContieroCellarSpringApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3e11f9e9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@31fa1761, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@26e356f0, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@4b0d79fc, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5a45133e, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@3224f60b], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+20:37:16.897 [main] DEBUG org.springframework.boot.ApplicationServletEnvironment - Activating profiles []
+20:37:16.898 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.2)
+
+2022-01-09 20:37:17.029  INFO 196286 --- [           main] c.c.ContieroCellarSpringApplicationTests : Starting ContieroCellarSpringApplicationTests using Java 14.0.2 on contierotesta with PID 196286 (started by elza in /home/elza/dev/ContieroCellar)
+2022-01-09 20:37:17.030  INFO 196286 --- [           main] c.c.ContieroCellarSpringApplicationTests : The following profiles are active: prod
+2022-01-09 20:37:17.383  INFO 196286 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-09 20:37:17.407  INFO 196286 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
+2022-01-09 20:37:17.704  INFO 196286 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-09 20:37:17.735  INFO 196286 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-09 20:37:17.811  INFO 196286 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-09 20:37:17.875  INFO 196286 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-09 20:37:18.068  INFO 196286 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-09 20:37:18.083  INFO 196286 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-09 20:37:18.409  INFO 196286 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-09 20:37:18.414  INFO 196286 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-09 20:37:18.741  WARN 196286 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-09 20:37:19.052  INFO 196286 --- [           main] c.c.ContieroCellarSpringApplicationTests : Started ContieroCellarSpringApplicationTests in 2.154 seconds (JVM running for 2.685)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.477 s - in com.contiero.cellar.ContieroCellarSpringApplicationTests
+[INFO] Running com.contiero.cellar.controller.WineControllerIntegrationTest
+2022-01-09 20:37:19.159  INFO 196286 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.contiero.cellar.controller.WineControllerIntegrationTest], using SpringBootContextLoader
+2022-01-09 20:37:19.160  INFO 196286 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.contiero.cellar.controller.WineControllerIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-09 20:37:19.160  INFO 196286 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.contiero.cellar.controller.WineControllerIntegrationTest]: WineControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-09 20:37:19.167  INFO 196286 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.contiero.cellar.ContieroCellarSpringApplication for test class com.contiero.cellar.controller.WineControllerIntegrationTest
+2022-01-09 20:37:19.169  INFO 196286 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-09 20:37:19.169  INFO 196286 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@346a2799, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@17344d7, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@75b4db22, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@670aac24, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@23909b3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1977b0df, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4a490518, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7890fbf9, org.springframework.test.context.event.EventPublishingTestExecutionListener@32ae11c9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@167bae0b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@14980819, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6b286640, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@294a12b5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@628aea61, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3606eee9]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.2)
+
+2022-01-09 20:37:19.185  INFO 196286 --- [           main] c.c.c.c.WineControllerIntegrationTest    : Starting WineControllerIntegrationTest using Java 14.0.2 on contierotesta with PID 196286 (started by elza in /home/elza/dev/ContieroCellar)
+2022-01-09 20:37:19.185  INFO 196286 --- [           main] c.c.c.c.WineControllerIntegrationTest    : The following profiles are active: test
+2022-01-09 20:37:19.270  INFO 196286 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-09 20:37:19.273  INFO 196286 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
+2022-01-09 20:37:19.354  INFO 196286 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-01-09 20:37:19.443  INFO 196286 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-01-09 20:37:19.454  INFO 196286 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-09 20:37:19.457  INFO 196286 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table if exists wine CASCADE 
+Hibernate: create table wine (id bigint generated by default as identity, name varchar(255) not null, number_of_bottles integer, price double, producer varchar(255), region varchar(255), type varchar(255), year integer, primary key (id))
+2022-01-09 20:37:19.501  INFO 196286 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-09 20:37:19.502  INFO 196286 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-09 20:37:19.609  WARN 196286 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-09 20:37:19.663  INFO 196286 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-01-09 20:37:19.762  INFO 196286 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-01-09 20:37:19.762  INFO 196286 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-01-09 20:37:19.763  INFO 196286 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2022-01-09 20:37:19.768  INFO 196286 --- [           main] c.c.c.c.WineControllerIntegrationTest    : Started WineControllerIntegrationTest in 0.596 seconds (JVM running for 3.401)
+Hibernate: select wine0_.id as id1_0_, wine0_.name as name2_0_, wine0_.number_of_bottles as number_o3_0_, wine0_.price as price4_0_, wine0_.producer as producer5_0_, wine0_.region as region6_0_, wine0_.type as type7_0_, wine0_.year as year8_0_ from wine wine0_ where wine0_.type=?
+Hibernate: select wine0_.id as id1_0_0_, wine0_.name as name2_0_0_, wine0_.number_of_bottles as number_o3_0_0_, wine0_.price as price4_0_0_, wine0_.producer as producer5_0_0_, wine0_.region as region6_0_0_, wine0_.type as type7_0_0_, wine0_.year as year8_0_0_ from wine wine0_ where wine0_.id=?
+Hibernate: update wine set name=?, number_of_bottles=?, price=?, producer=?, region=?, type=?, year=? where id=?
+Hibernate: select wine0_.id as id1_0_0_, wine0_.name as name2_0_0_, wine0_.number_of_bottles as number_o3_0_0_, wine0_.price as price4_0_0_, wine0_.producer as producer5_0_0_, wine0_.region as region6_0_0_, wine0_.type as type7_0_0_, wine0_.year as year8_0_0_ from wine wine0_ where wine0_.id=?
+Hibernate: select wine0_.id as id1_0_, wine0_.name as name2_0_, wine0_.number_of_bottles as number_o3_0_, wine0_.price as price4_0_, wine0_.producer as producer5_0_, wine0_.region as region6_0_, wine0_.type as type7_0_, wine0_.year as year8_0_ from wine wine0_ where wine0_.region=?
+Hibernate: select wine0_.id as id1_0_0_, wine0_.name as name2_0_0_, wine0_.number_of_bottles as number_o3_0_0_, wine0_.price as price4_0_0_, wine0_.producer as producer5_0_0_, wine0_.region as region6_0_0_, wine0_.type as type7_0_0_, wine0_.year as year8_0_0_ from wine wine0_ where wine0_.id=?
+Hibernate: update wine set name=?, number_of_bottles=?, price=?, producer=?, region=?, type=?, year=? where id=?
+Hibernate: select wine0_.id as id1_0_, wine0_.name as name2_0_, wine0_.number_of_bottles as number_o3_0_, wine0_.price as price4_0_, wine0_.producer as producer5_0_, wine0_.region as region6_0_, wine0_.type as type7_0_, wine0_.year as year8_0_ from wine wine0_ where wine0_.type=? and wine0_.price<?
+Hibernate: select wine0_.id as id1_0_0_, wine0_.name as name2_0_0_, wine0_.number_of_bottles as number_o3_0_0_, wine0_.price as price4_0_0_, wine0_.producer as producer5_0_0_, wine0_.region as region6_0_0_, wine0_.type as type7_0_0_, wine0_.year as year8_0_0_ from wine wine0_ where wine0_.id=?
+Hibernate: update wine set name=?, number_of_bottles=?, price=?, producer=?, region=?, type=?, year=? where id=?
+Hibernate: select wine0_.id as id1_0_, wine0_.name as name2_0_, wine0_.number_of_bottles as number_o3_0_, wine0_.price as price4_0_, wine0_.producer as producer5_0_, wine0_.region as region6_0_, wine0_.type as type7_0_, wine0_.year as year8_0_ from wine wine0_ where wine0_.price<?
+Hibernate: insert into wine (id, name, number_of_bottles, price, producer, region, type, year) values (null, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select wine0_.id as id1_0_0_, wine0_.name as name2_0_0_, wine0_.number_of_bottles as number_o3_0_0_, wine0_.price as price4_0_0_, wine0_.producer as producer5_0_0_, wine0_.region as region6_0_0_, wine0_.type as type7_0_0_, wine0_.year as year8_0_0_ from wine wine0_ where wine0_.id=?
+Hibernate: delete from wine where id=?
+Hibernate: select count(*) as col_0_0_ from wine wine0_ where wine0_.id=?
+Hibernate: select wine0_.id as id1_0_, wine0_.name as name2_0_, wine0_.number_of_bottles as number_o3_0_, wine0_.price as price4_0_, wine0_.producer as producer5_0_, wine0_.region as region6_0_, wine0_.type as type7_0_, wine0_.year as year8_0_ from wine wine0_ where wine0_.producer=?
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.906 s - in com.contiero.cellar.controller.WineControllerIntegrationTest
+[INFO] Running com.contiero.cellar.controller.WineControllerUnitTest
+2022-01-09 20:37:20.079  INFO 196286 --- [           main] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.contiero.cellar.controller.WineControllerUnitTest], using SpringBootContextLoader
+2022-01-09 20:37:20.080  INFO 196286 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.contiero.cellar.controller.WineControllerUnitTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-09 20:37:20.080  INFO 196286 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.contiero.cellar.controller.WineControllerUnitTest]: WineControllerUnitTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-09 20:37:20.085  INFO 196286 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.contiero.cellar.ContieroCellarSpringApplication for test class com.contiero.cellar.controller.WineControllerUnitTest
+2022-01-09 20:37:20.085  INFO 196286 --- [           main] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-09 20:37:20.085  INFO 196286 --- [           main] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7ecca48, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3d5b2c1e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@137a9d69, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@12faeada, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@73a5cc47, org.springframework.test.context.support.DirtiesContextTestExecutionListener@17fa25f1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@50ac63b2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1545ef47, org.springframework.test.context.event.EventPublishingTestExecutionListener@48dfce5c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@eccaf1b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3dceec83, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@74b13aa, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@31d09031, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5a0f5567, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@106f0051]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.2)
+
+2022-01-09 20:37:20.097  INFO 196286 --- [           main] c.c.c.controller.WineControllerUnitTest  : Starting WineControllerUnitTest using Java 14.0.2 on contierotesta with PID 196286 (started by elza in /home/elza/dev/ContieroCellar)
+2022-01-09 20:37:20.097  INFO 196286 --- [           main] c.c.c.controller.WineControllerUnitTest  : The following profiles are active: prod
+2022-01-09 20:37:20.313  INFO 196286 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-01-09 20:37:20.313  INFO 196286 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-01-09 20:37:20.313  INFO 196286 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2022-01-09 20:37:20.319  INFO 196286 --- [           main] c.c.c.controller.WineControllerUnitTest  : Started WineControllerUnitTest in 0.231 seconds (JVM running for 3.951)
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.293 s - in com.contiero.cellar.controller.WineControllerUnitTest
+[INFO] Running com.contiero.cellar.domain.WineTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.223 s - in com.contiero.cellar.domain.WineTest
+[INFO] Running com.contiero.cellar.service.WineServiceUnitTest
+2022-01-09 20:37:20.601  INFO 196286 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.contiero.cellar.service.WineServiceUnitTest], using SpringBootContextLoader
+2022-01-09 20:37:20.601  INFO 196286 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.contiero.cellar.service.WineServiceUnitTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-09 20:37:20.602  INFO 196286 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.contiero.cellar.service.WineServiceUnitTest]: WineServiceUnitTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-09 20:37:20.604  INFO 196286 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.contiero.cellar.ContieroCellarSpringApplication for test class com.contiero.cellar.service.WineServiceUnitTest
+2022-01-09 20:37:20.604  INFO 196286 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-09 20:37:20.605  INFO 196286 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@66859669, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6e591c03, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7115d5af, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7ce58c1c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@36996b37, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1006d0e3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4f61c7e1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1fb4377d, org.springframework.test.context.event.EventPublishingTestExecutionListener@6289376f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@442e7215, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b1ebbe, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3b802baa, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@109941fa, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@27103726, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2df6d461]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.2)
+
+2022-01-09 20:37:20.615  INFO 196286 --- [           main] c.c.cellar.service.WineServiceUnitTest   : Starting WineServiceUnitTest using Java 14.0.2 on contierotesta with PID 196286 (started by elza in /home/elza/dev/ContieroCellar)
+2022-01-09 20:37:20.615  INFO 196286 --- [           main] c.c.cellar.service.WineServiceUnitTest   : The following profiles are active: prod
+2022-01-09 20:37:20.678  INFO 196286 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-09 20:37:20.681  INFO 196286 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 1 JPA repository interfaces.
+2022-01-09 20:37:20.768  INFO 196286 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-09 20:37:20.771  INFO 196286 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-01-09 20:37:20.783  INFO 196286 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-01-09 20:37:20.783  INFO 196286 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-09 20:37:20.803  INFO 196286 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-09 20:37:20.803  INFO 196286 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-09 20:37:20.858  WARN 196286 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-09 20:37:20.991  INFO 196286 --- [           main] c.c.cellar.service.WineServiceUnitTest   : Started WineServiceUnitTest in 0.384 seconds (JVM running for 4.623)
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.416 s - in com.contiero.cellar.service.WineServiceUnitTest
+2022-01-09 20:37:21.027  INFO 196286 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-09 20:37:21.028  INFO 196286 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-09 20:37:21.033  INFO 196286 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-09 20:37:21.034  INFO 196286 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-09 20:37:21.035  INFO 196286 --- [ionShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+Hibernate: drop table if exists wine CASCADE 
+2022-01-09 20:37:21.042  INFO 196286 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-01-09 20:37:21.043  INFO 196286 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-01-09 20:37:21.044  INFO 196286 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-09 20:37:21.045  INFO 196286 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-01-09 20:37:21.049  INFO 196286 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 38, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.870 s
+[INFO] Finished at: 2022-01-09T20:37:21Z
+[INFO] ------------------------------------------------------------------------
