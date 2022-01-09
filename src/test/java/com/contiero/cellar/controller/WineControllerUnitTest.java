@@ -2,6 +2,7 @@ package com.contiero.cellar.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -135,5 +136,18 @@ public class WineControllerUnitTest {
         mvc.perform(get("/wine/readByTypeAndPriceLessThan/red/" + price))
             .andExpect(status().isOk())
             .andExpect(content().json(json));
+    }
+
+    @Test
+    public void updateNumberOfBottlesTest() throws Exception {
+        Wine out = new Wine(6, "Bordeaux Superieur", "red", "Belgrave", 78.00,  2001, "France", 24);
+        Mockito.when(service.update(6, out)).thenReturn(out);
+        String json = mapper.writeValueAsString(out);
+        mvc.perform(put("/wine/update/6")
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(json))
+            .andExpect(status().isAccepted())
+            .andExpect(content().json(json))
+            ;
     }
 }
