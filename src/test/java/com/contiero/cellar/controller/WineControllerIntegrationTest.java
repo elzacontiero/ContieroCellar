@@ -1,6 +1,7 @@
 package com.contiero.cellar.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -156,5 +157,10 @@ public class WineControllerIntegrationTest {
         checkUpdate(out);
     }
 
+    @Test 
+    public void deleteTest() throws Exception {
+        mvc.perform(delete("/wine/delete/6"))
+            .andExpect(status().isNoContent());
+    }
 
 }

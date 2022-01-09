@@ -1,6 +1,7 @@
 package com.contiero.cellar.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -159,5 +160,15 @@ public class WineControllerUnitTest {
     public void updateAll() throws Exception {
         Wine wine = new Wine(6, "Bordeaux", "red", "Bertinerie", 12.00,  2002, "France", 24);
         checkUpdate(wine);
+    }
+    
+    @Test 
+    public void deleteTest() throws Exception {
+        Wine wine = new Wine(6, "Bordeaux", "red", "Bertinerie", 12.00,  2002, "France", 24);
+        Mockito.when(service.getById(6)).thenReturn(wine);
+        Mockito.when(service.delete(6)).thenReturn(true);
+    
+        mvc.perform(delete("/wine/delete/6"))
+            .andExpect(status().isNoContent());
     }
 }

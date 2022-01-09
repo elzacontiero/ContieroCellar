@@ -1,6 +1,7 @@
 package com.contiero.cellar.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -150,4 +151,9 @@ public class WineServiceUnitTest {
         checkUpdate(in, out);        
     }
 
+    @Test 
+    public void deleteTest() throws Exception {
+        Mockito.when(repo.existsById(Long.valueOf(6L))).thenReturn(false);
+        assertTrue(service.delete(6));
+    }
 }
