@@ -2,6 +2,7 @@ package com.contiero.cellar.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -127,5 +128,18 @@ public class WineControllerIntegrationTest {
             .andExpect(content().json(json));
     }
 
+
+    @Test
+    public void updateNumberOfBottlesTest() throws Exception {
+        Wine out = new Wine(6, "Bordeaux Superieur", "red", "Belgrave", 78.00,  2001, "France", 24);
+
+        String json = mapper.writeValueAsString(out);
+        mvc.perform(put("/wine/update/6")
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(json))
+            .andExpect(status().isAccepted())
+            .andExpect(content().json(json))
+            ;
+    }
 
 }
