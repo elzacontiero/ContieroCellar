@@ -71,7 +71,7 @@ The objective is to create a Spring Boot REST API, with utilisation of supportin
 
 ## Screenshot of test results.
 
-
+Tests were run from the command line using `./mvnw test` and the output was collected and located in [doc/test.log](doc/test.log)
 
 ## Link to Jira Board. 
 
