@@ -171,4 +171,15 @@ public class WineControllerUnitTest {
         mvc.perform(delete("/wine/delete/6"))
             .andExpect(status().isNoContent());
     }
+
+    // Test CC-75 readById with non-existent ID
+    @Test 
+    public void retrieveByNonExistentIDTest() throws Exception {
+
+        Mockito.when(service.getById(123)).thenReturn(null);
+
+        mvc.perform(get("/wine/readById/123"))
+            .andExpect(status().isNotFound());
+
+    }
 }

@@ -40,7 +40,11 @@ public class WineController {
 	@GetMapping("/readById/{id}")
 	public ResponseEntity<Wine> readById(@PathVariable long id) {
 		Wine wine = service.getById(id);
-		return new ResponseEntity<Wine>(wine, HttpStatus.OK);
+		if (wine != null) {
+			return new ResponseEntity<Wine>(wine, HttpStatus.OK);
+		} else {
+			return new ResponseEntity<Wine>(wine, HttpStatus.NOT_FOUND);
+		}
 	}
 	
 	@GetMapping("/readByProducer/{producer}")
