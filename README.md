@@ -22,11 +22,11 @@ Jira as an Agile project management tool was an extremely valuable instrument fo
 
 Having little experience with Spring framework, some tasks took more effort to implement than originally expected. This happened, for example, during the development of the first action: creating an entity (`/wine/create`) where much more code was needed than expected. As a result, part of this code was later reused by other actions making subsequent tasks less time consuming. 
 
-Another similar example was the layout of tasks to develop the code for updating specific fiels in the entity *Wine*. This proved to be not relevant, as an update was in fact implemented at once, not one per field/property.
+Another similar example was the layout of tasks to develop the code for updating specific fiedls in the entity *Wine*. This proved to be not relevant, as an update was in fact implemented at once, not one per field/property.
 
 ## Possible improvements for future revisions of the project.
 
-It would be nice to have another controller (possibly under `/status`) containing information about the current status of the Cellar such as: the total number bottles, total value of the cellar, the most expensive and the cheapest wine, or a list of wines having  low number of bottles that need to be back ordered.
+It would be nice to have another controller (possibly under `/status`) containing information about the current status of the Cellar, such as: the total number bottles, total value of the cellar, the most expensive and the cheapest wine, or a list of wines containing low number of bottles that need to be back ordered.
 
 
 ## Screenshots of postman requests with the output from the API.
