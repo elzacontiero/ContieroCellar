@@ -1,10 +1,10 @@
 # Contiero Cellar
 
-This project implements a REST service in Spring framework to control CRUD operations on a MySQL table containing 
+This project implements a REST service to keep records of wines in a cellar. It is implemented in Java with Spring framework using MySQL database as a backend.
 
 ## Why are we doing this?
 
-This project is part of the requirements for the completion of QA Academy Bootcamp where the fundamentals of software engineering were covered.
+This project is part of the requirement for the completion of QA Academy Bootcamp where the fundamentals of software engineering were covered.
 
 The objective is to create a Spring Boot REST API, with utilisation of supporting tools, methodologies, and technologies, that encapsulates all fundamental and practical modules covered during training.
 
