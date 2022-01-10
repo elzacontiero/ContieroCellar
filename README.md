@@ -78,13 +78,34 @@ Include statistics of the Cellar such as: total number bottles, total value of t
 ![Test 9 - Get entries by producer](doc/postman/Test9_getByProducer.PNG)
 
 
-## Screenshots of database.
+## Screenshot of database.
 
 ![Database](doc/MySQL.PNG)
 
-## Screenshot of test results.
+## Screenshots of test results.
 
-Tests were run from the command line using `./mvnw test` and the output was collected and located in [doc/test.log](doc/test.log)
+Spring Application Test
+
+![Spring Application Test](doc/tests_screenshots/SpringApplicationTest.png)
+
+Wine Entity Unit Test
+
+![Wine Entity Unit Test](doc/tests_screenshots/WineTest.png)
+
+Wine Service Unit Test
+
+![Wine Service Unit Test](doc/tests_screenshots/WineServiceUnitTest.png)
+
+Wine Controller Unit Test
+
+![Wine Controller Unit Test](doc/tests_screenshots/WineControllerUnitTest.png)
+
+Wine Controller Integration Test
+
+![Wine Controller Integration Test](doc/tests_screenshots/WineControllerIntegrationTest.png)
+
+
+Tests were also run from the command line using `./mvnw test` and the output was collected and located in [doc/test.log](doc/test.log)
 
 ## Link to Jira Board. 
 
