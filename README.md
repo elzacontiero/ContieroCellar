@@ -16,7 +16,7 @@ The expectations for this challenge were that some difficulties would arise in t
 
 ## What went well?
 
-Jira as an Agile project management tool was an extremely valuable instrument for the planning of the whole project as it allowed to layout the work ahead from the big picture to the fine details. Also, Spring Framework was undoubtedly the most helpful in the whole coding experience. It makes incredible simple to implement REST services, with minimal code.
+Jira as an Agile project management tool was an extremely valuable instrument for the planning of the whole project as it allowed to layout the work ahead from the big picture to the fine details. Also, Spring Framework was undoubtedly the most helpful in the whole coding experience. 
 
 ## What didn't go as planned?
 
