@@ -55,8 +55,12 @@ public class WineService implements WineServiceMethods<Wine> {
 
 	@Override
 	public boolean delete(long id) {
-		repo.deleteById(id);
-		return !repo.existsById(id);
+		if (repo.existsById(id)) {
+			repo.deleteById(id);
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	@Override
