@@ -28,8 +28,6 @@ Another similar example was the layout of tasks to develop the code for updating
 
 It would be nice to have another controller (possibly under `/status`) containing information about the current status of the Cellar such as: the total number bottles, total value of the cellar, the most expensive and the cheapest wine, or a list of wines having  low number of bottles that need to be back ordered.
 
-When the user attempts to delete a record providing a invalid ID, or an ID that is not in the database, the server is currently responding with 500 Server Error. This could be improved by returning NOT FOUND, which is more appropriate. 
-
 
 ## Screenshots of postman requests with the output from the API.
 
