@@ -31,6 +31,8 @@ Include statistics of the Cellar such as: total number bottles, total value of t
 
 ## Screenshots of postman requests with the output from the API.
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/18804407-896cf0e9-3557-44be-9867-516e6cf41556?action=collection%2Ffork&collection-url=entityId%3D18804407-896cf0e9-3557-44be-9867-516e6cf41556%26entityType%3Dcollection%26workspaceId%3D28bbb8b7-61d6-48bc-b5fa-d612af4acb68)
+
 ### Test 1 - Create Wine entity
 
 ![Test 1 - Create Entity](doc/postman/Test1_create.PNG)
@@ -75,9 +77,6 @@ Include statistics of the Cellar such as: total number bottles, total value of t
 
 ![Test 9 - Get entries by producer](doc/postman/Test9_getByProducer.PNG)
 
-### Run in Postman
-
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/18804407-896cf0e9-3557-44be-9867-516e6cf41556?action=collection%2Ffork&collection-url=entityId%3D18804407-896cf0e9-3557-44be-9867-516e6cf41556%26entityType%3Dcollection%26workspaceId%3D28bbb8b7-61d6-48bc-b5fa-d612af4acb68)
 
 ## Screenshots of database.
 
