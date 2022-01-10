@@ -14,9 +14,11 @@ The objective is to create a Spring Boot REST API, with utilisation of supportin
 
 The expectations for this challenge were that some difficulties would arise in the course of the implementation of some technical tasks. However, with the various learning resources which have been made available during this training by QA Academy, coupled with the help of attentive instructors, it was possible to overcome most of the problems during the implementation. 
 
-## What went well? / What didn't go as planned?
+## What went well?
 
-Jira as an Agile project management tool was an important instrument for the planning of the whole project as it allowed to layout the work ahead from the big picture to the fine details.
+Jira as an Agile project management tool was an extremely valuable instrument for the planning of the whole project as it allowed to layout the work ahead from the big picture to the fine details. Also, Spring Framework was undoubtedly the most helpful in the whole coding experience. It makes incredible simple to implement REST services, with minimal code.
+
+## What didn't go as planned?
 
 Having little experience with Spring framework, some tasks took more effort to implement than originally expected. This happened, for example, during the development of the first action: creating an entity (`/wine/create`) where much more code was needed than expected. As a result, part of this code was later reused by other actions making subsequent tasks less time consuming. 
 
