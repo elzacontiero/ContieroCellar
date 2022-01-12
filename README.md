@@ -4,7 +4,7 @@ This project implements a REST service to keep records of wines in a cellar. It 
 
 ## Why are we doing this?
 
-This project is part of the requirement for the completion of QA Academy Bootcamp where the fundamentals of software engineering were covered.
+This project is part of the requirement for the completion of QA Digital Skills Bootcamp where the fundamentals of software engineering were covered.
 
 The objective is to create a Spring Boot REST API, with utilisation of supporting tools, methodologies, and technologies, that encapsulates all fundamental and practical modules covered during training.
 
@@ -20,9 +20,9 @@ Jira as an Agile project management tool was an extremely valuable instrument fo
 
 ## What didn't go as planned?
 
-Having little experience with Spring framework, some tasks took more effort to implement than originally expected. This happened, for example, during the development of the first action: creating an entity (`/wine/create`) where much more code was needed than expected. As a result, part of this code was later reused by other actions making subsequent tasks less time consuming. 
+Some tasks took more effort to implement than originally expected. This happened, for example, during the development of the first action: creating an entity (`/wine/create`) where much more code was needed than expected. As a result, part of this code was later reused by other actions making subsequent tasks less time consuming. 
 
-Another similar example was the layout of tasks to develop the code for updating specific fiedls in the entity *Wine*. This proved to be not relevant, as an update was in fact implemented at once, not one per field/property.
+Another similar example was the layout of tasks to develop the code for updating specific fields in the entity *Wine*. This proved to be not relevant, as an update was in fact implemented at once, not one per field/property.
 
 ## Possible improvements for future revisions of the project.
 
