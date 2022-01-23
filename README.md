@@ -1,10 +1,10 @@
 # Contiero Cellar
 
-This project implements a REST service to keep records of wines in a cellar. It is implemented in Java with Spring framework using MySQL database as a backend.
+This project implements a REST service to keep records of wines in a cellar. It is written in Java using Spring Boot to perform CRUD operations on MySQL database.
 
 ## Why are we doing this?
 
-This project is part of the requirement for the completion of QA Digital Skills Bootcamp where the fundamentals of software engineering were covered.
+This project is part of the requirement for the completion of QA Digital Skills Bootcamp where the fundamentals of Software Development were covered.
 
 The objective is to create a Spring Boot REST API, with utilisation of supporting tools, methodologies, and technologies, that encapsulates all fundamental and practical modules covered during training.
 
@@ -12,17 +12,15 @@ The objective is to create a Spring Boot REST API, with utilisation of supportin
 
 ## How I expected the challenge to go.
 
-The expectations for this challenge were that some difficulties would arise in the course of the implementation of some technical tasks. However, with the various learning resources which have been made available during this training by QA Academy, coupled with the help of attentive instructors, it was possible to overcome most of the problems during the implementation. 
+The expectations for this challenge were that some difficulties would arise in the course of the implementation of some technical tasks. However, with the various learning resources which have been made available during this training by QA Academy and with the help of instructors, it was possible to overcome most of the problems during the implementation. 
 
 ## What went well?
 
-Jira as an Agile project management tool was an extremely valuable instrument for the planning of the whole project as it allowed to layout the work ahead from the big picture to the fine details. Also, Spring Framework was undoubtedly the most helpful in the whole coding experience. 
+Jira as an Agile project management tool was an extremely valuable instrument for the planning of the whole project as it allowed to layout the work ahead from the big picture to the fine details. Also, Spring Boot Framework was undoubtedly the most helpful in the whole coding experience. 
 
 ## What didn't go as planned?
 
 Some tasks took more effort to implement than originally expected. This happened, for example, during the development of the first action: creating an entity (`/wine/create`) where much more code was needed than expected. As a result, part of this code was later reused by other actions making subsequent tasks less time consuming. 
-
-Another similar example was the layout of tasks to develop the code for updating specific fields in the entity *Wine*. This proved to be not relevant, as an update was in fact implemented at once, not one per field/property.
 
 ## Possible improvements for future revisions of the project.
 
