@@ -8,11 +8,7 @@ This project is part of the requirement for the completion of QA Digital Skills 
 
 The objective is to create a Spring Boot REST API, with utilisation of supporting tools, methodologies, and technologies, that encapsulates all fundamental and practical modules covered during training.
 
-# QA Academy Requirements
-
-## How I expected the challenge to go.
-
-The expectations for this challenge were that some difficulties would arise in the course of the implementation of some technical tasks. However, with the various learning resources which have been made available during this training by QA Academy and with the help of instructors, it was possible to overcome most of the problems during the implementation. 
+# QA Academy Requirements 
 
 ## What went well?
 
